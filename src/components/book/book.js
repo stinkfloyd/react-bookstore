@@ -12,11 +12,16 @@ const Book = (props) => {
                 <div id="subtitle">{props.book.subtitle}</div>
             </div>
             <div className="row">
+                <div id="author"><strong>Author: </strong>{props.book.author}</div>
                 <div id="description"><strong>Description: </strong>{props.book.description}</div>
             </div>
             <div className="row">
                 <div id="publisherInfo">
-                    <strong>Publisher: </strong>{props.book.publisher} <strong>Published: </strong>{date.toDateString()} <strong>Pages: </strong>{props.book.pages} <a href={props.book.website} id="website">Visit Webpage</a>
+                    <div className="row" id="moreOptions">
+                        <strong>Price: </strong>${props.book.price}.00
+                        <button>Add to Cart</button>
+                        <a href={props.book.website} id="website">Visit Webpage </a>
+                    </div>
                 </div>
             </div>
         </div>

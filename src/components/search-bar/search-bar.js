@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './search-bar.css'
 
 class SearchBar extends Component {
 
@@ -19,8 +20,10 @@ class SearchBar extends Component {
 
     onSubmit = (e) => {
         e.preventDefault()
+        const searchType = e.target.searchType.value
         const { searchTerm } = this.state
-        this.props.onSearch({ searchTerm })
+
+        this.props.onSearch({ searchTerm, searchType })
         this.setState({
             searchTerm: ''
         })
@@ -28,15 +31,20 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <div>
+            <div className="col-sm-12" id="searchBar">
                 <h3>Search</h3>
                 <form onSubmit={this.onSubmit}>
                     <div>
                         <label>Search: </label>
-                        <input value={this.state.searchTerm} onChange={this.onSearchChange} />
+                        <input value={this.state.searchTerm} name="searchTerm" onChange={this.onSearchChange} required />
                     </div>
-                    <div>
+                    <div className="radio">
+                        <label>Author<input type="radio" name="searchType" value="author" defaultChecked /></label>
+                        <label>Title<input type="radio" name="searchType" value="title" /></label>
+                    </div>
+                    <div id="buttonRow">
                         <input type="submit" />
+                        <button type="button" onClick={this.props.onReset}>Reset</button>
                     </div>
                 </form>
             </div>

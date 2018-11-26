@@ -1,8 +1,7 @@
 .book {
     border: 1px solid black;
     width: 95%;
-    margin: auto;
-    margin-bottom: 1em;
+    margin: 1em;
 }
 
 #title {
@@ -17,8 +16,19 @@
     border-bottom: 1px solid black;
 }
 
+#publisherInfo,
+#moreOptions {
+    margin: auto;
+}
+
+#moreOptions button {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
 /* Padding */
 #description,
-#publisherInfo {
+#publisherInfo,
+#moreOptions {
     padding: .5em;
 }
