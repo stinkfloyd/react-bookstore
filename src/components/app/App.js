@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './App.css'
 import BookList from '../book-list/book-list'
+import SearchBar from '../search-bar/search-bar'
+import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 class App extends Component {
 
@@ -26,6 +28,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <SearchBar />
         <BookList bookList={this.state.bookList} />
       </div>
     )
