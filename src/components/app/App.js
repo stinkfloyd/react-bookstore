@@ -12,8 +12,6 @@ class App extends Component {
   }
 
   componentDidMount = async () => {
-    console.log('Mounted');
-
     await this.getBookList()
   }
 

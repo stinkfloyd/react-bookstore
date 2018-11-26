@@ -2,8 +2,6 @@ import React from 'react'
 import Book from '../book/book'
 
 const BookList = (props) => {
-    console.log(props);
-
     return (
         <div>
             <h1>Book List</h1>
