@@ -16,11 +16,16 @@ const Book = (props) => {
                 <div id="description">{props.book.description}</div>
             </div>
             <div className="row">
-                <a href={props.book.website} id="website">Visit Webpage</a>
+                <div id="publisherInfo">
+                    <strong>Publisher: </strong>{props.book.publisher} <strong>Published: </strong>{date.toDateString()}
+                </div>
+            </div>
+
+            <div className="row">
+                <div id="pages"><strong>Pages: </strong>{props.book.pages}</div>
             </div>
             <div className="row">
-                <div id="publisher">Publisher: {props.book.publisher}</div>
-                <div id="publisher"> Published: {date.toDateString()}</div>
+                <a href={props.book.website} id="website">Visit Webpage</a>
             </div>
         </div>
     )
