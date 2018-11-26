@@ -10,17 +10,15 @@
 }
 
 #subtitle {
-    font-size: 1.5em;
+    font-size: 1em;
+}
+
+#description {
+    border-bottom: 1px solid black;
 }
 
 /* Padding */
 #description,
 #publisherInfo {
     padding: .5em;
-}
-
-/* Bottom Border */
-#subtitle,
-#description {
-    border-bottom: 1px solid black;
 }

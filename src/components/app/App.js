@@ -25,10 +25,16 @@ class App extends Component {
     this.setState({ bookList })
   }
 
+  onSearch = ({ searchTerm }) => {
+    //this needs to search for the book by the term
+    console.log(searchTerm);
+
+  }
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
+        <SearchBar onSearch={this.onSearch} />
         <BookList bookList={this.state.bookList} />
       </div>
     )
