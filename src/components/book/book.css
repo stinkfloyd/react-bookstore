@@ -1,0 +1,15 @@
+.book {
+    border: 1px solid black;
+    width: 95%;
+    margin: auto;
+}
+
+#title {}
+
+#subtitle {
+    font-size: 10px;
+}
+
+#description {
+    font-size: 12px;
+}
