@@ -19,7 +19,7 @@ const Book = (props) => {
                 <div id="publisherInfo">
                     <div className="row" id="moreOptions">
                         <strong>Price: </strong>${props.book.price}.00
-                        <button>Add to Cart</button>
+                        <button onClick={props.addToCart} id={props.book.id}>Add to Cart</button>
                         <a href={props.book.website} id="website">Visit Webpage </a>
                     </div>
                 </div>

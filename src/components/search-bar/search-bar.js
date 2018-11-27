@@ -43,8 +43,8 @@ class SearchBar extends Component {
                         <label>Title<input type="radio" name="searchType" value="title" /></label>
                     </div>
                     <div id="buttonRow">
-                        <input type="submit" />
-                        <button type="button" onClick={this.props.onReset}>Reset</button>
+                        <input type="submit" className="btn btn-primary" />
+                        <button type="button" className="btn btn-primary" onClick={this.props.onReset}>Reset Search</button>
                     </div>
                 </form>
             </div>
