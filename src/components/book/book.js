@@ -2,7 +2,6 @@ import React from 'react'
 import './book.css'
 
 const Book = (props) => {
-    let date = new Date(props.book.published)
     return (
         <div className="list-group-item book">
             <div className="row">

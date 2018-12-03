@@ -32,11 +32,11 @@ class App extends Component {
   }
 
   addToCart = async (ev) => {
-    let id = ev.target.id
+    let id = parseInt(ev.target.id)
     const bookListJSON = await fetch(`${process.env.REACT_APP_API_URL}/books`)
     let bookList = await bookListJSON.json()
     let bookToAdd = bookList.filter((book) => {
-      return (book.id == id)
+      return (book.id === id)
     })
     bookToAdd[0].inCart = true
     let result = bookList.filter((book) => {
